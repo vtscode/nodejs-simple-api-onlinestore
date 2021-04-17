@@ -81,7 +81,7 @@ router.post(`/`, uploadOptions.single('image'), async (req, res) =>{
     product = await product.save();
 
     if(!product) 
-    return res.status(500).send('The product cannot be created')
+      return res.status(500).send('The product cannot be created')
 
     res.send(product);
 })
@@ -112,7 +112,7 @@ router.put('/:id',async (req, res)=> {
     )
 
     if(!product)
-    return res.status(500).send('the product cannot be updated!')
+      return res.status(500).send('the product cannot be updated!')
 
     res.send(product);
 })

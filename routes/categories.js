@@ -31,7 +31,7 @@ router.post('/', async (req,res)=>{
     category = await category.save();
 
     if(!category)
-    return res.status(400).send('the category cannot be created!')
+      return res.status(400).send('the category cannot be created!')
 
     res.send(category);
 })
@@ -49,7 +49,7 @@ router.put('/:id',async (req, res)=> {
     )
 
     if(!category)
-    return res.status(400).send('the category cannot be created!')
+      return res.status(400).send('the category cannot be created!')
 
     res.send(category);
 })
