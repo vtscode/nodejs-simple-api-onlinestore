@@ -142,6 +142,7 @@ router.get(`/get/count`, async (req, res) =>{
 
 router.get(`/get/featured/:count`, async (req, res) =>{
     const count = req.params.count ? req.params.count : 0
+    // + sign mean = convert count to int
     const products = await Product.find({isFeatured: true}).limit(+count);
 
     if(!products) {

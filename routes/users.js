@@ -38,7 +38,7 @@ router.post('/', async (req,res)=>{
     user = await user.save();
 
     if(!user)
-    return res.status(400).send('the user cannot be created!')
+      return res.status(400).send('the user cannot be created!')
 
     res.send(user);
 })
@@ -71,7 +71,7 @@ router.put('/:id',async (req, res)=> {
     )
 
     if(!user)
-    return res.status(400).send('the user cannot be created!')
+      return res.status(400).send('the user cannot be created!')
 
     res.send(user);
 })
@@ -118,7 +118,7 @@ router.post('/register', async (req,res)=>{
     user = await user.save();
 
     if(!user)
-    return res.status(400).send('the user cannot be created!')
+      return res.status(400).send('the user cannot be created!')
 
     res.send(user);
 })
